@@ -21,7 +21,6 @@ namespace VideoStore.Controllers
         }
 
         // GET: movies
-        [Authorize]
         public async Task<IActionResult> Index()
         {
               return _context.movies != null ? 
@@ -30,7 +29,6 @@ namespace VideoStore.Controllers
         }
 
         // GET: movies/Details/5
-        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.movies == null)
@@ -49,7 +47,6 @@ namespace VideoStore.Controllers
         }
 
         // GET: movies/Create
-        [Authorize]
         public IActionResult Create()
         {
             return View();
